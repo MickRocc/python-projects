@@ -12,3 +12,4 @@ def pc_health():
   # Output will show the CPU usage percentage over a 0.1 second interval.
 
 pc_health()
+
