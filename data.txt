@@ -1,5 +1,0 @@
-Path(__file_).parent / 'data.txt' returns current file (This one)'s file path then appends the file we are wanting to open to it. 
- Options have to be followed to avoid issues: 
- w = write, this will overright all data with new data using the file.write command.
- a = append, this will add to the end of the file. Preserving all existing data.
- r = read, this will only allow reading of the file.
