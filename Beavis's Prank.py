@@ -1,4 +1,4 @@
-global_attempts = 5 # Global variable to track attempts
+global_attempts = 3 # Global variable to track attempts
 
 import time # Import time module for delays
 def main(): # Main function to get user input and handle logic
@@ -31,11 +31,16 @@ def main(): # Main function to get user input and handle logic
         else: # If attempts remain
             print(f"You have {global_attempts} attempts left.") # Notify user of remaining attempts
             main() # Call main function again
-    elif name == "BUTTHEAD" or name == "BEAVIS": # Check for uppercase inappropriate names
-        print("DON'T SCREAM AT ME AGAIN!") # Notify user
+    elif name == "BUTTHEAD" or name == "BEAVIS" or name.isupper(): # Check for uppercase inappropriate names
+        if(global_attempts == 3):
+            print("DON'T SCREAM AT ME!") # Notify user
+        if(global_attempts == 2):
+            print("STOP SCREAMING AT ME!") # Notify user
+        if(global_attempts == 1):
+            print("SCREAM AT ME ONE. MORE. TIME. I DARE YOU!") # Notify user
         global_attempts -= 1 # Decrement attempts
         if global_attempts == 0: # Check if attempts are exhausted
-            print(f"SINCE YOU WON'T STOP SCREAMING AT ME!! I'M...") # Notify user
+            print(f"SINCE YOU WON'T STOP... I'M...") # Notify user
             time.sleep(1) # Pause for dramatic effect
             print("C:\\format c: /fs:NULL") # Simulate command
             time.sleep(3) # Pause for dramatic effect
@@ -54,14 +59,17 @@ def main(): # Main function to get user input and handle logic
             print("Exiting!") # Notify user and exit
             return # Exit the function
         else: # If attempts remain
-            print(f"You have {global_attempts} attempts left.") # Notify user of remaining attempts
+            if(global_attempts > 1):
+                print(f"You have {global_attempts} attempts left.") # Notify user of remaining attempts 
+            else:
+                print(f"You have {global_attempts} attempt left.") # Notify user of remaining attempts
             main() # Call main function again
             return # Exit the function
     else: # If valid name is entered
         print("That's NOT your name!") # Notify user
         global_attempts -= 1 # Decrement attempts
         if global_attempts == 0: # Check if attempts are exhausted
-            print(f"Nice try! {name} Exiting.") # Notify user and exit
+            print(f"Nice try {name.capitalize()}! Exiting.") # Notify user and exit
             return # Exit the function
         else: # If attempts remain
             print(f"You have {global_attempts} attempts left.") # Notify user of remaining attempts
