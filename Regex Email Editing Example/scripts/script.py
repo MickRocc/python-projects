@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Author: Michael D. Parnell
-# Date: June 2024
+# Date: June 2025
 # Description: This script reads a CSV file containing user email addresses,
 #              replaces email addresses with a specified old domain with a new domain,
 #              and writes the updated email addresses to a new CSV file.
@@ -24,8 +24,8 @@ def replace_domain(address, old_domain, new_domain):
 # Main function to execute the script
 def main():
   old_domain, new_domain = 'abc.edu', 'xyz.edu' # Define old and new domains
-  csv_file_location = os.getcwd() + '/user_emails.csv' # Location of the input CSV file
-  report_file = os.getcwd() + '/updated_user_emails.csv' # Location of the output CSV file
+  csv_file_location = os.getcwd() + '/Regex Email Editing Example/user_emails.csv' # Location of the input CSV file
+  report_file = os.getcwd() + '/Regex Email Editing Example/updated_user_emails.csv' # Location of the output CSV file
   user_email_list = [] # List to store user email addresses
   old_domain_email_list = [] # List to store email addresses with the old domain
   new_domain_email_list = [] # List to store email addresses with the new domain
